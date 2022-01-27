@@ -24,12 +24,10 @@ echo "------------------------------------< Data preparation>-------------------
 echo "Copying the source code"
 date +"%T"
 cd $SLURM_TMPDIR
-cp -r ~/scratch/meta-dataset
+cp -r ~/scratch/meta-dataset .
 
-cp ~/scratch/imagenet_object_localization_patched2019.tar.gz .
-
+cp ~/scratch/dataset/imagenet_object_localization_patched2019.tar.gz .
 tar -xzf imagenet_object_localization_patched2019.tar.gz
-
 
 cp ~/scratch/metadatasets/wordnet.is_a.txt $SLURM_TMPDIR/ILSVRC/Data/CLS-LOC/train/
 cp ~/scratch/metadatasets/wordnet.is_a.txt $SLURM_TMPDIR/ILSVRC/Data/CLS-LOC/train/
